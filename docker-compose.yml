@@ -1,6 +1,12 @@
 version: '3'
 
 services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu 
+    env_file:
+      .db_env
+    ports:
+      - "1433:1433"
   web:
     env_file:
       .env
@@ -10,3 +16,5 @@ services:
       - .:/code
     ports:
       - "8000:8000"
+    depends_on:
+      - db
