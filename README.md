@@ -12,7 +12,7 @@ Create a .env and .db_env files with the following content in the root of projec
 *.env*
 ```
 DB_DRIVER=
-DATABASE=some_table
+DATABASE=some_database
 PWD=$0M3P#55WORD
 UID=sa
 SERVER=DB
