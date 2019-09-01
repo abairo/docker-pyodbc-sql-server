@@ -8,7 +8,7 @@ Edit the docker-compose.yml file and add a command to start your project, exampl
 command: python app.py
 ```
 ___
-Create a .env and .db_env files with the next content in the root of project:
+Create a .env and .db_env files with the following content in the root of project:
 *.env*
 ```
 DB_DRIVER=
