@@ -12,7 +12,7 @@ Create a .env and .db_env files with the next content in the root of project:
 *.env*
 ```
 DB_DRIVER=
-DATABASE=belinha
+DATABASE=some_table
 PWD=$0M3P#55WORD
 UID=sa
 SERVER=DB
@@ -46,7 +46,7 @@ app = Flask(__name__)
 @app.route("/")
 def get_any_content():
     with get_connection() as db_connection:
-        result = db_connection.execute('SELECT * FROM belinha')
+        result = db_connection.execute('SELECT * FROM some_table')
         response = ''
         for row in result:
             response += ' - '.join(map(str, row)) + '| '
